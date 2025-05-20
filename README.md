@@ -1,1 +1,26 @@
-# Processo Seletivo Watch - Elton Marques
+# App Elton Marques for Watch Brasil
+
+## Project
+
+Streaming App
+
+### Instance
+
+- User
+  
+  - ID
+  - First Name
+  - Last Name
+  - Birthdat
+  - E-mail
+  - Address
+  - Password
+
+- Video
+  
+  - ID
+  - Title
+  - Description
+  - Cover
+  - Author
+  - Catetgory
