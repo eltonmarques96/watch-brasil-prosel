@@ -11,7 +11,7 @@ Streaming App
   - ID
   - First Name
   - Last Name
-  - Birthdat
+  - Birthday
   - E-mail
   - Address
   - Password
