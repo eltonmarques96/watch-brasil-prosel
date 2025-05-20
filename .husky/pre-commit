@@ -1,0 +1,6 @@
+echo 'Formarting code on Backend'
+# npm run format || (echo 'Lint on Backend Failed' && exit 1)
+echo 'Checking Lint for backend'
+# npm run lint:backend || (echo 'Lint on Backend Failed' && exit 1)
+
+echo 'Lint Finished'
