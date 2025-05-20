@@ -20,6 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@liaoliaots/nestjs-redis": "^10.0.0",
     "@nestjs/common": "^11.1.1",
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",
@@ -37,6 +38,7 @@
     "@opentelemetry/sdk-node": "^0.201.1",
     "@opentelemetry/sdk-trace-node": "^2.0.1",
     "@prisma/client": "^6.8.2",
+    "ioredis": "^5.6.1",
     "nestjs-pino": "^4.4.0",
     "pino-http": "^10.4.0",
     "reflect-metadata": "^0.2.2",
