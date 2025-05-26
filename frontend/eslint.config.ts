@@ -21,4 +21,13 @@ export default defineConfigWithVueTs(
   vueTsConfigs.recommended,
   ...pluginOxlint.configs['flat/recommended'],
   skipFormatting,
+  {
+    rules: {
+      'vue/multi-word-component-names': 'off',
+      'vue/no-v-html': 'off',
+      'oxlint/no-unsafe-optional-chaining': 'off',
+      'oxlint/no-unsafe-nullish-coalescing': 'off',
+      'oxlint/no-unsafe-optional-chaining-in-computed-properties': 'off',
+    },
+  },
 )
