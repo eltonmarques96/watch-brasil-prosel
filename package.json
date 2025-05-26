@@ -15,9 +15,12 @@
   "scripts": {
     "commit": "cz",
     "prepare": "husky",
-    "format": "cd backend && yarn format",
-    "lint": "cd backend && yarn lint",
-    "lint:backend": "cd backend && yarn lint"
+    "format:backend": "cd backend && yarn format",
+    "format:frontend": "cd frontend && yarn format",
+    "lint:backend": "cd backend && yarn lint",
+    "lint:frontend": "cd frontend && yarn lint",
+    "test": "cd backend && yarn test",
+    "test:e2e": "cd backend && yarn test:e2e"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "config": {

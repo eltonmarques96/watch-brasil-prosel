@@ -4,21 +4,19 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { LoggerModule } from 'nestjs-pino';
 import { ConfigModule } from '@nestjs/config';
-import { RedisModule } from '@liaoliaots/nestjs-redis';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { getTypeOrmConfig } from './config/typeorm.config';
+import { CacheModule } from '@nestjs/cache-manager';
+import { RedisOptions } from '../src/config/app-options.constants';
 
 @Module({
   imports: [
-    UsersModule,
+    ConfigModule.forRoot({ isGlobal: true }),
     LoggerModule.forRoot(),
-    ConfigModule.forRoot(),
-    RedisModule.forRoot({
-      config: {
-        host: '0.0.0.0',
-        port: 6379,
-        password: 'password',
-      },
-    }),
+    TypeOrmModule.forRoot(getTypeOrmConfig()),
+    CacheModule.registerAsync(RedisOptions),
+    UsersModule,
     ThrottlerModule.forRoot({
       throttlers: [
         {

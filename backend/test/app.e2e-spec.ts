@@ -3,6 +3,7 @@ import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { App } from 'supertest/types';
 import { AppModule } from './../src/app.module';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication<App>;
@@ -10,6 +11,7 @@ describe('AppController (e2e)', () => {
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
+      providers: [{ provide: CACHE_MANAGER, useValue: {} }],
     }).compile();
 
     app = moduleFixture.createNestApplication();
